@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador texto a Video</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #2b2626;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(26, 21, 21);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #f3ecec;
+        }
+
+        h2 {
+            color: #ddd8d8;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            background-color: #2c2e30;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #d4cccc;
+        }
+
+        .info-box h3 {
+            color: #e2e6eb;
+            margin-top: 0;
+        }
+
+        .info-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            padding: 5px 0;
+            color: #d4d7dd;
+        }
+
+        .file-input {
+            margin: 20px 0;
+            padding: 10px;
+            background: #27352d;
+            border-radius: 5px;
+        }
+
+        #status {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background: #282c29;
+            color: #dad2d2;
+        }
+
+        #preview {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Generador de texto a Video</h2>
+
+        <div class="info-box">
+            <h3>Límites Recomendados</h3>
+            <ul>
+                <li>📁 Tamaño óptimo: hasta 100KB</li>
+                <li>📝 Número de caracteres: máximo 50,000</li>
+                <li>📋 Frases: 200-300 máximo</li>
+                <li>⏱️ Tiempo estimado: 20-25 minutos de video</li>
+            </ul>
+        </div>
+
+        <div class="file-input">
+            <label>Archivo de Texto:</label>
+            <input type="file" id="textFile" accept=".txt">
+        </div>
+
+        <button onclick="procesarVideo()">Generar Video</button>
+        
+        <div id="status"></div>
+        <video id="preview" controls></video>
+    </div>
+    <script src="subtitulos.js"></script>
+</body>
+</html>
